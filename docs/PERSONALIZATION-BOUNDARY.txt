@@ -1,0 +1,37 @@
+SHELF AWARE — PERSONALIZATION THAT WE CAN EXPLAIN
+
+The profile is a set of explicit, reviewed shopping goals. The app does not diagnose the wearer or identify a new wearer by face, voice, age, weight or the act of putting on the glasses.
+
+ONBOARDING
+  General shopper: no personal nutrient preference preselected.
+  Portion-conscious: compare total carbohydrate at the intended portion; prefer more fiber.
+  Fiber-focused: prefer more fiber, while still showing carbohydrate and other available facts.
+  The shopper can edit these choices and an ingredient-avoid list before consenting.
+
+OPTIONAL REVIEWED ADVICE
+  A shopper may select goals based on advice they have already reviewed with a clinician and record the source date. They explicitly confirm that the selected goals reflect that advice. The system records only the source category, optional date and review time.
+  No lab values, diagnosis, medication, report file, date of birth, age or weight are needed for this MVP. The source metadata does not generate targets, enter the model prompt, or get read aloud. Automatic blood-report import is deferred.
+  “Report says high triglycerides” is not itself an instruction to select a food. Dietary guidance can differ with clinical circumstances and severity. The user reviews the relevant shopping priorities instead of the app inventing them from a number.
+
+RICE EXAMPLE — CONDITIONAL DIALOGUE, NOT TESTED PRODUCT DATA
+  Shopper: “I’m choosing between these two rice packages.”
+  Assistant: asks for exact labels, intended amount and a compatible serving basis.
+  If both records are reviewed, both portions use the same basis, and the brown rice actually has more fiber, the assistant can identify it as matching the selected fiber goal and state the total-carbohydrate comparison.
+  It must not infer that the other rice is forbidden, that brown rice has fewer carbohydrates, or that either will produce a predicted glucose response.
+  Jasmine can be white or brown. The exact variant matters. A dry-label calculation is not a cooked-rice calculation. Explicit cooked/prepared-portion requests require clarification in this MVP.
+
+JUDGE HANDOFF
+  Stop capture and speech. Use an anonymous General shopper session reviewed by the judge, attached to the same paired iPhone. Do not announce or inherit the prior wearer's personal profile. The glasses stay paired to the existing phone/account.
+  A family context switch retains reviewed product facts, clears the old portion and pending action, and stops applying the personal goals and avoid list. It does not establish a family's medical suitability.
+
+REAL VS DEFERRED
+  Real: selected goals, reviewed facts, deterministic portion math, explicit recipient and action confirmation.
+  Deferred: raw-record upload/OCR, CGM integration, meal response histories, future glucose prediction, nutrient limits derived from laboratory results, medication or insulin instructions.
+
+PRIMARY REFERENCES
+  ACC hypertriglyceridemia consensus: individualized dietary guidance and materially different clinical contexts.
+  https://www.acc.org/Latest-in-Cardiology/ten-points-to-remember/2021/07/27/21/04/2021-ACC-ECDP-Hypertriglyceridemia
+  American Heart Association: carbohydrate quality and whole-grain fiber.
+  https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/nutrition-basics/carbohydrates
+  NIDDK: individualized diabetes eating and portion context.
+  https://www.niddk.nih.gov/health-information/diabetes/overview/healthy-living-with-diabetes

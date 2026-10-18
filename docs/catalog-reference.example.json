@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "products": [
+    {
+      "id": "replace-with-exact-product-id",
+      "name": "REPLACE with exact brand, variant, and package size",
+      "category": "REPLACE with matching comparison category",
+      "market": "US",
+      "barcode": null,
+      "basis": {"value": null, "unit": "mL"},
+      "nutrients": {
+        "total_carbohydrate_g": null,
+        "total_sugars_g": null,
+        "added_sugars_g": null,
+        "fiber_g": null,
+        "protein_g": null,
+        "sodium_mg": null,
+        "saturated_fat_g": null
+      },
+      "label_reviewed": false,
+      "source": "REPLACE with physical package source and exact nutrition column",
+      "reviewed_at": null,
+      "net_quantity": null,
+      "net_quantity_reviewed": false,
+      "ingredients": [],
+      "ingredients_reviewed": false,
+      "reference_images": []
+    }
+  ]
+}

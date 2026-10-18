@@ -1,0 +1,45 @@
+name: ShelfAware
+options:
+  bundleIdPrefix: dev.shelfaware
+  deploymentTarget:
+    iOS: "17.2"
+packages:
+  MetaWearablesDAT:
+    url: https://github.com/facebook/meta-wearables-dat-ios
+    exactVersion: 1.0.1
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    SWIFT_STRICT_CONCURRENCY: targeted
+    IPHONEOS_DEPLOYMENT_TARGET: "17.2"
+    MARKETING_VERSION: "6.1.0"
+    CURRENT_PROJECT_VERSION: "8"
+    CODE_SIGN_STYLE: Automatic
+    META_APP_ID: "0"
+    CLIENT_TOKEN: "0"
+targets:
+  ShelfAware:
+    type: application
+    platform: iOS
+    sources:
+      - path: ShelfAware
+        excludes: [Info.plist, ShelfAware.entitlements]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: dev.shelfaware.ios
+        INFOPLIST_FILE: ShelfAware/Info.plist
+        CODE_SIGN_ENTITLEMENTS: ShelfAware/ShelfAware.entitlements
+        TARGETED_DEVICE_FAMILY: "1"
+        SWIFT_ACTIVE_COMPILATION_CONDITIONS: "$(inherited) HAS_META_DAT"
+    dependencies:
+      - package: MetaWearablesDAT
+        product: MWDATCore
+      - package: MetaWearablesDAT
+        product: MWDATCamera
+schemes:
+  ShelfAware:
+    build:
+      targets:
+        ShelfAware: all
+    run:
+      config: Debug

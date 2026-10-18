@@ -1,0 +1,8 @@
+{
+  "cases": [
+    {"image": "data/holdout/known-snack.jpg", "capture_session": "judge-rehearsal-separate-session", "expected_product_id": "replace-with-team-sku-id"},
+    {"image": "data/holdout/unseen-snack.jpg", "capture_session": "judge-rehearsal-separate-session", "expected_product_id": null},
+    {"image": "data/holdout/near-variant.jpg", "capture_session": "judge-rehearsal-separate-session", "expected_product_id": null},
+    {"image": "data/holdout/blurred-label.jpg", "capture_session": "judge-rehearsal-separate-session", "expected_product_id": null}
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "products": [
+    {
+      "product_id": "replace-with-team-sku-id",
+      "name": "Exact brand, flavor, size and market from package",
+      "barcode": "COPY_ACTUAL_PACKAGE_BARCODE",
+      "variant_group": "brand-and-packaging-family",
+      "references": [
+        {"image": "data/references/front-01.jpg", "capture_session": "qfc-reference-session"},
+        {"image": "data/references/front-02.jpg", "capture_session": "qfc-reference-session"},
+        {"image": "data/references/front-03.jpg", "capture_session": "qfc-reference-session"}
+      ]
+    }
+  ]
+}

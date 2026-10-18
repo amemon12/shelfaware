@@ -1,0 +1,35 @@
+# Explicit phone-camera fallback. No Meta SDK, entitlements, or glasses claim.
+name: ShelfAwarePhone
+options:
+  bundleIdPrefix: dev.shelfaware
+  deploymentTarget:
+    iOS: "17.2"
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    SWIFT_STRICT_CONCURRENCY: targeted
+    IPHONEOS_DEPLOYMENT_TARGET: "17.2"
+    MARKETING_VERSION: "6.1.0"
+    CURRENT_PROJECT_VERSION: "8"
+    CODE_SIGN_STYLE: Automatic
+    META_APP_ID: "0"
+    CLIENT_TOKEN: "0"
+targets:
+  ShelfAwarePhone:
+    type: application
+    platform: iOS
+    sources:
+      - path: ShelfAware
+        excludes: [Info.plist, ShelfAware.entitlements]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: dev.shelfaware.phonefallback
+        INFOPLIST_FILE: ShelfAware/Info.plist
+        TARGETED_DEVICE_FAMILY: "1"
+schemes:
+  ShelfAwarePhone:
+    build:
+      targets:
+        ShelfAwarePhone: all
+    run:
+      config: Debug
